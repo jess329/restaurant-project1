@@ -1,16 +1,17 @@
 :root {
     --bg-clr1: #FCE9CF;
-    --btn-clr: #3d170a;
-    /* --text-clr: #2c0c02; */
+    --btn-clr: white;
+    --text-clr: #2c0c02;
 }
 
+/* General */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
 }
 body {
-    background: var(--bg-clr1);
     font-family: "Merienda";
     overflow-x: hidden;
     margin: 0;
@@ -18,7 +19,7 @@ body {
 a, li {
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: white;
 }
 button {
     border: 1px solid lightgray;
@@ -35,10 +36,28 @@ button {
     color: var(--btn-clr);
 }
 .btn:hover {
-    background: var(--btn-clr);
-    color: var(--bg-clr1);
+    background: var(--text-clr);
+    color: white;
+    border: 2px solid var(--text-clr);
 }
 
+/* Hero */
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    z-index: 10;
+}
 
 .left-info h1 {
     font-size: 40px;
